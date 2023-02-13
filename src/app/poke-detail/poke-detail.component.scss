@@ -1,0 +1,344 @@
+body{
+    display: flex;
+    align-items: center;
+}
+
+.switch-poke{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 30px;
+    height: 80px;
+
+    & div {
+        cursor: pointer;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    font-family: 'Roboto Flex', sans-serif;
+    padding-bottom: 30px;
+    height: 500px;
+}
+
+.container-left{
+    background-color: whitesmoke;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.poke-header{
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: 'Roboto Flex', sans-serif;
+
+}
+
+.poke-name-nr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.h2-up {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 50px;
+    &::first-letter{
+        text-transform: uppercase;
+    }
+}
+.h2-down {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 50px;
+    color: #616161;
+}
+
+.poke-img{
+    height: 487px;	
+
+    & img{
+        height: 103%;
+        width: 430px;
+        background-color: lightgray;
+        border-radius: 10px;
+    }
+
+}
+
+.stats{
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 430px;
+    height: 270px;
+    border-radius: 10px;
+    background-color: #4242429e;
+    justify-content: center;
+
+
+    & span {
+    background-color: whitesmoke;
+    height: 200px;
+    width: 50px;
+    border-radius: 4px;
+    display: inline-block;
+    transform: rotate(180deg);
+    }
+
+    & div {
+        width: 50px;
+        border-radius: 4px;
+        background-color: #30a7d7;; 
+
+    }
+
+    & p {
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+}
+
+.column {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+}
+
+.poke-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 418px;
+    background-color: #30a7d7;
+    border-radius: 10px;
+    gap: 14px;
+    margin-bottom: 16px;
+    
+
+    & p {
+        color: white;
+        font-size: 20px;
+        margin-bottom: 3px;
+        
+    }
+
+    & span {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+ 
+}
+
+.poke-type{
+    display: flex;
+    gap: 12px;
+
+    & span {
+        font-size: 20px;
+        padding: 8px 30px 8px 30px;
+        border-radius: 3px;
+        min-width: 40px;
+        text-align: center;
+    }
+}
+
+// types
+
+.bg-grass {
+    background-color: #9bcc50;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-poison {
+    background-color: #b97fc9;
+    color: white;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-fire {
+    background-color: #fd7d24;
+    color: white;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-water {
+    background-color: #4592c4;
+    color: white;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-flying {
+    background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+    color: black;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-bug {
+    
+    background-color: #729f3f;
+    color: white;
+
+
+    text-align: center;
+}
+
+.bg-normal {
+    background-color: #a4acaf;
+    color: black;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-electric {
+    background-color: #eed535;
+    color: black;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-ground {
+    background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+    color: black;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-fairy {
+    background-color: #fdb9e9;
+    color: black;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-fighting {
+    background-color: #d56723;
+    color: white;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-psychic {
+    background-color: #f366b9;
+    color: white;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-rock {
+    background-color: #a38c21;
+    color: white;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-steel{
+    background-color: #9eb7b8;
+    color: black;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-ice{
+    background-color: #51c4e7;
+    color: black;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-dragon {
+    background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+    color: white;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.bg-dark{
+    background-color: #707070;;
+    color: white;
+ 
+}
+
+.bg-ghost {
+    background-color: #7b62a3;
+    color: white;
+    font-size: 20px;
+    padding: 8px 30px 8px 30px;
+    border-radius: 3px;
+    min-width: 40px;
+    text-align: center;
+}

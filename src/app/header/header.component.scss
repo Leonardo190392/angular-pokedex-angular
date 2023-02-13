@@ -1,0 +1,18 @@
+h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 44px;
+    color: whitesmoke;
+    text-decoration: underline;
+    z-index: -1;
+}
+
+.mat-toolbar{
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    z-index: 3;
+}
+
+img:hover{
+    cursor: pointer;
+}

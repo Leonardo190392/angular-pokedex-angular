@@ -1,0 +1,21 @@
+<div  class="container-allpokemon">
+  <mat-card *ngFor="let poke of data; index as i" class="example-card" (click)="getRow(data[i].position)">
+    <img class="all-poke-img" src="{{ data[i].image }}" alt="" />
+
+    <mat-card-content>
+      <div class="poke-number">Nr {{ data[i].position }}</div>
+      <div class="poke-name">{{ data[i].name }}</div>
+      
+      <div class="poke-type"   >
+        <div *ngFor="let poke of data[i].types; index as k" class="{{data[i].types[k].type.name}}">{{data[i].types[k].type.name}}</div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div  class="more-pokemon">
+  <button class="glow-on-hover" type="button" (click)="loadMorePokemon()">Load more Pokemon</button>
+</div>
+
+
+

@@ -1,0 +1,55 @@
+<div class="poke-header">
+  <div>
+    <a href="#"></a>
+    <a href="#"></a>
+  </div>
+  <div class="poke-name-nr">
+    <h2 class="h2-up">{{ pokemon.name}}</h2>
+    <h2 class="h2-down">Nr. {{ pokemon.id }}</h2>
+    <div class="poke-type">
+      <span *ngFor="let type of pokemon.types; index as k" class="bg-{{pokemon.types[k].type.name}}" >{{pokemon.types[k].type.name | titlecase}}</span>
+    </div>
+  </div>
+</div>
+
+<div class="switch-poke">
+  <div (click)="nextPokemon(pokemon.id)" >{{ pokemon.name }}</div>
+  <div (click)="previousPokemon(pokemon.id)">{{ pokemon.name }}</div>
+</div>
+
+<div class="container ">
+
+  <div class="container-left">
+      <div class="poke-img ">
+        <img  src="{{ pokemonImg }}" alt="" />
+      </div>
+  </div>
+
+  <div class="container-right">
+    <div class="poke-info  ">
+      <div>
+        <p>Height:</p>
+        <span>{{ pokemon.height }} m</span>
+      </div>
+
+      <div>
+        <p>Weight:</p>
+        <span>{{pokemon.weight}} kg</span>
+      </div>
+
+      <div>
+        <p >Abilities:</p>
+        <span *ngFor="let ability of pokemon.abilities; index as i">{{pokemon.abilities[i].ability.name | titlecase}}<br></span> 
+      </div>
+    </div>
+
+    <div class="stats">
+      <header *ngFor="let stat of pokemon.stats; index as i" class="column">
+        <p>{{ pokemon.stats[i].stat.name.substring(0, 11) }}</p>
+        <span>
+          <div class="" [style.height.px]="pokemon.stats[i].base_stat"></div>
+        </span>
+      </header>
+    </div>
+  </div>
+</div>
