@@ -10,6 +10,8 @@ import { PokemonService } from '../services/pokemon.service';
 })
 export class PokeDetailComponent {
   
+  pokemonNext: any = '';
+  pokemonBefore: any = '';
   pokemon: any = '';
   pokemonType = [];
   pokemonImg = '';
@@ -21,6 +23,10 @@ export class PokeDetailComponent {
   ) {
     this.activatedRouter.params.subscribe((params) => {
       this.getPokemon(params['id']);
+      this.getNextPokemon(params['id']);
+      if(params['id'] >= 2) {
+        this.getPreviousPokemon(params['id']);
+      }
     });
   }
 
@@ -36,19 +42,34 @@ export class PokeDetailComponent {
           console.log(res) 
         } 
       },
-      (err) => {}
+    );
+  }
+
+  getNextPokemon(id: number) {
+    this.pokemonService.getPokemons(+id+1).subscribe(
+      (res) => {
+        this.pokemonNext = res;      
+      },
+    );
+  }
+
+  getPreviousPokemon(id: number) {
+    this.pokemonService.getPokemons(+id-1).subscribe(
+      (res) => {
+        this.pokemonBefore = res;  
+      },
     );
   }
 
   nextPokemon(add: any) {
-    if (add >= 2) {
-      this.router.navigateByUrl(`pokeDetail/${add-1}`)
-      console.log(add)
-    }
-   
+      this.router.navigateByUrl(`pokeDetail/${add+1}`)
   }
 
   previousPokemon(add: any) {
-    this.router.navigateByUrl(`pokeDetail/${add+1}`)
+    if(add >= 2) {
+      console.log(add)
+      this.router.navigateByUrl(`pokeDetail/${add-1}`)
+    }
+    
   }
 }

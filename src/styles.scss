@@ -3,7 +3,9 @@
 html, body { height: 100%; }
 body { 
     margin: 0; 
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Roboto Flex', sans-serif !important;
+    font-family: 'Varela Round', sans-serif !important;
+
 
     background-color: rgba($color: #000000, $alpha: 0.5) ;
 }
