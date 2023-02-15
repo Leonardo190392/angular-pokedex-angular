@@ -15,15 +15,15 @@
   </div>
 </div>
 
-<div class="switch-poke">
-  <div *ngIf="pokemon.id >= 2" class="poke-before">
+<div class="switch-poke" >
+  <div *ngIf="pokemon.id >= 2" class="poke-before" (click)="previousPokemon(pokemon.id)">
     <p>Nr {{ pokemonBefore.id }}</p>
-    <div  (click)="previousPokemon(pokemon.id)">
+    <div  >
       {{ pokemonBefore.name | titlecase }}
     </div>
   </div>
-  <div class="poke-next">
-    <div (click)="nextPokemon(pokemon.id)">
+  <div class="poke-next" (click)="nextPokemon(pokemon.id)">
+    <div >
       {{ pokemonNext.name | titlecase }}
     </div>
     <p>Nr {{ pokemonNext.id }}</p>

@@ -19,6 +19,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     HeaderComponent,
     FooterComponent,
     PokeDetailComponent,
-    AllPokemonComponent
+    AllPokemonComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatPaginatorModule,
     MatInputModule,
     MatChipsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
@@ -11,12 +11,16 @@ import { PokemonService } from '../services/pokemon.service';
 })
 export class AllPokemonComponent {
 
+  public test: string | undefined;
   displayedColumns: string[] = ['position', 'image', 'name'];
   data: any[] = [];
   dataSource = new MatTableDataSource<any>(this.data);
   pokemons = [];
   limit = 30;
-  start = 0;
+  start = 1;
+  id: any[] = [];
+  searchText = '';
+
 
   @ViewChild(MatPaginator ,{static: true}) paginator!: MatPaginator;
 
@@ -42,23 +46,12 @@ export class AllPokemonComponent {
           };
           this.data.push(pokemonData);     
         },
-        err =>{
-          console.log(err);
-        }
       )
     }
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
-  }
-
-  getRow(row: any) {
+  showSinglePokemon(row: any) {
     console.log(row)
     this.router.navigateByUrl(`pokeDetail/${row}`);
   }
