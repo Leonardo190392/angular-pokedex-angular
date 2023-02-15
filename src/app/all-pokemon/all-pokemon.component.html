@@ -1,29 +1,41 @@
-
-
 <div class="search-position">
   <form class="search-container" action="">
-    <input  [(ngModel)]="searchText" name="search" type="text " class="search-input" placeholder="Search for id, type or name" >
-  </form>  
+    <input
+      [(ngModel)]="searchText"
+      name="search"
+      type="text "
+      class="search-input"
+      placeholder="Search for id, type or name"
+    />
+  </form>
 </div>
 
-<div  class="container-allpokemon">
-  <mat-card *ngFor="let poke of data | filter: searchText"  class="example-card" (click)="showSinglePokemon(poke.position)">
+<div class="container-allpokemon">
+  <mat-card
+    *ngFor="let poke of data | filter : searchText"
+    class="example-card"
+    (click)="showSinglePokemon(poke.position)"
+  >
     <img class="all-poke-img" src="{{ poke.image }}" alt="" />
 
     <mat-card-content>
-      <div class="poke-number"  >Nr {{ poke.position }} </div>
+      <div class="poke-number">Nr {{ poke.position }}</div>
       <div class="poke-name">{{ poke.name }}</div>
-      
-      <div class="poke-type"   >
-        <div *ngFor="let type of poke.types; index as k" class="{{type.type.name}}">{{type.type.name}}</div>
+
+      <div class="poke-type">
+        <div
+          *ngFor="let type of poke.types; index as k"
+          class="{{ type.type.name }}"
+        >
+          {{ type.type.name }}
+        </div>
       </div>
     </mat-card-content>
   </mat-card>
 </div>
 
-<div  class="more-pokemon">
-  <button class="glow-on-hover" type="button" (click)="loadMorePokemon()">Load more Pokemon</button>
+<div class="more-pokemon">
+  <button class="glow-on-hover" type="button" (click)="loadMorePokemon()">
+    Load more Pokemon
+  </button>
 </div>
-
-
-

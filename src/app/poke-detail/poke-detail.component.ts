@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PokemonService } from '../services/pokemon.service';
@@ -67,7 +66,6 @@ export class PokeDetailComponent {
 
   previousPokemon(add: any) {
     if(add >= 2) {
-      console.log(add)
       this.router.navigateByUrl(`pokeDetail/${add-1}`)
     }
     

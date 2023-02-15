@@ -394,3 +394,67 @@ body{
     min-width: 40px;
     text-align: center;
 }
+
+@media only screen and (max-width: 900px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .container-left{
+        padding: 0;
+    }
+
+
+    .poke-img {
+
+        height: auto;
+
+        & img {
+            height: 430px;
+            width: 430px;
+        }
+        
+    }
+
+    .poke-name-nr{
+        gap: 25px;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+
+    .switch-poke {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .poke-before{
+        font-size: 18px;
+        width: 160px;
+    }
+
+    .poke-next{
+        font-size: 18px;
+        width: 160px;
+    }
+
+    .poke-name-nr {
+        flex-direction: column;
+
+        & h2 {
+            font-size: 28px;
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    
+  }
